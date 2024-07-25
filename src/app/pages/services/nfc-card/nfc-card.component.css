@@ -1,0 +1,158 @@
+/*keyframes*/
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.unknownPadding {
+  position: center;
+  height: 120px;
+  width: 100%;
+  background-size: cover;
+  top: 0;
+}
+/* top container content */
+.container {
+  margin: auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  animation: fade-in 1.5s ease-in;
+}
+.text {
+  width: 100%;
+}
+
+.text h1,
+h2 {
+  color: darkblue;
+  font-weight: normal;
+  padding: 0px 0;
+}
+
+.text h2 {
+  padding-top: 10px;
+}
+
+.text p {
+  padding: 0;
+  font-size: 15px;
+}
+.text {
+  padding: 15px 0;
+}
+.text ul li {
+  color: grey;
+  list-style: decimal;
+}
+ul {
+  width: 97%;
+  margin: auto;
+  padding: 0 90px 10px 10px;
+  font-size: 15px;
+  list-style: circle;
+}
+
+ul li {
+  padding: 5px 0;
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* subContaiener */
+.subContainer {
+  width: 85%;
+  margin: auto;
+  padding: 4% 0 5%;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  animation: fade-in 1s ease-in;
+  gap: 3rem;
+}
+
+.features {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 2px solid #047d8c;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.features:hover {
+  box-shadow: 0 0 10px rgba(78, 59, 222, 0.381);
+  scale: 1.05;
+  transition: 0.3s;
+  border: none;
+}
+h4 {
+  color: #047d8c;
+}
+.features h2 {
+  color: green;
+}
+
+.features p {
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+.advantages span {
+  font-style: italic;
+}
+
+/* small screen size */
+@media (max-width: 80rem) {
+  .container {
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding: 0 20px 20px;
+  }
+
+  ul {
+    width: 100%;
+  }
+  .text img {
+    width: 80%;
+  }
+  .image img {
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+  }
+  .subContainer {
+    display: block;
+  }
+
+  .features {
+    margin: 20px;
+  }
+  img {
+    width: 100%;
+  }
+  ul {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 40rem) {
+  .container {
+    width: 100%;
+  }
+  .image img {
+    width: 100%;
+  }
+}

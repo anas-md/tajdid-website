@@ -1,0 +1,148 @@
+/*keyframes*/
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scale {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.unknownPadding {
+  position: center;
+  height: 120px;
+  width: 100%;
+  background-size: cover;
+  top: 0;
+}
+
+/* top container content  */
+.container {
+  margin: auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 15px;
+  animation: fade-in 1s ease-in;
+}
+
+.text h1,
+h2 {
+  color: darkblue;
+  font-weight: normal;
+  /* padding: px 0; */
+}
+
+.text p {
+  padding: 1px;
+}
+.text {
+  padding: 10px 0;
+}
+
+ul {
+  width: 90%;
+  margin: auto;
+  list-style: circle;
+}
+
+ul li {
+  padding-bottom: 5px;
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* subContaiener content*/
+.subContainer {
+  width: 100%;
+  margin: auto;
+  padding: 4% 5% 5%;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  animation: fade-in 1.5s ease-in;
+  gap: 3rem;
+  /* background-color: rgb(253, 241, 241); */
+  border-radius: 50px 50px 0 0;
+}
+
+.features {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 2px solid #047d8c;
+  /* background-color: rgb(247, 246, 246); */
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.features h3 {
+  color: grey;
+  padding: 0 10px;
+}
+
+.features:hover {
+  box-shadow: 0 0 10px rgba(78, 59, 222, 0.381);
+  scale: 1.05;
+  transition: 0.3s;
+  border: none;
+}
+
+.features h2 {
+  color: green;
+}
+
+.features p {
+  padding: 0;
+  margin: auto;
+}
+
+.advantages span {
+  font-style: italic;
+}
+
+/* small screen size */
+@media (max-width: 80rem) {
+  .container {
+    display: block;
+    width: 90%;
+    margin: auto;
+    padding: 0 20px 20px;
+  }
+
+  ul {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .text img {
+    width: 80%;
+  }
+  img {
+    width: 70%;
+  }
+  .subContainer {
+    display: block;
+  }
+
+  .features {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 40rem) {
+  img {
+    width: 100%;
+  }
+}

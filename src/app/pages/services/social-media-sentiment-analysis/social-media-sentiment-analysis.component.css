@@ -1,0 +1,136 @@
+/*keyframes*/
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.unknownPadding {
+  position: center;
+  height: 120px;
+  width: 100%;
+  background-size: cover;
+  top: 0;
+}
+
+/* top container content */
+.container {
+  margin: auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 20px;
+  animation: fade-in 1s ease-in;
+}
+
+.text h1,
+h2 {
+  color: darkblue;
+  font-weight: normal;
+}
+
+.text p {
+  padding: px 0;
+  font-size: 15px;
+}
+.text {
+  padding: 15px 0;
+}
+
+.text img {
+  width: 60%;
+  padding: 20px;
+}
+
+ul {
+  width: 92%;
+  margin: auto;
+  list-style: circle;
+  font-size: 16px;
+}
+
+ul li {
+  padding-bottom: 10px;
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* subContaiener */
+.subContainer {
+  width: 85%;
+  margin: auto;
+  padding: 4% 0 5%;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  animation: fade-in 1.5s ease-in;
+  gap: 3rem;
+}
+
+.features {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 2px solid #047d8c;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.features h3 {
+  color: grey;
+}
+
+.features:hover {
+  box-shadow: 0 0 10px rgba(78, 59, 222, 0.381);
+  scale: 1.05;
+  transition: 0.3s;
+  border: none;
+}
+
+.features h2 {
+  color: green;
+}
+
+.features p {
+  padding: 0 5px 15px;
+  margin: auto;
+}
+
+.advantages span {
+  font-style: italic;
+}
+
+@media (max-width: 80rem) {
+  .container {
+    display: block;
+    width: 90%;
+  }
+  img {
+    width: 80%;
+  }
+
+  .subContainer {
+    display: block;
+  }
+
+  .features {
+    margin: 20px;
+  }
+  .text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 40rem) {
+  img {
+    width: 100%;
+  }
+}

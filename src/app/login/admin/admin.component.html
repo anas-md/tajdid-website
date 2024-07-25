@@ -1,0 +1,140 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+  crossorigin="anonymous"
+/>
+
+<div class="unknown"></div>
+<div class="container">
+  <div class="text-container">
+    <div class="content">
+      <h3>Hi, <span>Admin</span></h3>
+      <div *ngFor="let note of notes; index as i">
+      </div>
+      <p>Welcome to admin page</p>
+    </div>
+  </div>
+  <div class="table-container">
+    <h1>Customer & Services</h1>
+
+    <div class="table-container" class="table-responsive">
+      <table
+        class="table table-hover"
+        id="datatableexample"
+      >
+        <thead>
+          <tr class="table-dark">
+            <th scope="col" class="bg-primary">#</th>
+            <th scope="col" class="bg-primary">Name</th>
+            <th scope="col" class="bg-primary">Email</th>
+            <th scope="col" class="bg-primary">Mobile</th>
+            <th scope="col" class="bg-primary">Service</th>
+            <th scope="col" class="bg-primary">Description</th>
+            <th scope="col" class="bg-primary">
+              Action
+              <a href="/addUserService"><i class="bi bi-plus-circle"></i> </a>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let note of notes; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <!-- name -->
+            <td>
+              <div *ngIf="note.isEdit">
+                <input type="text" [(ngModel)]="note.name" />
+              </div>
+              <div *ngIf="!note.isEdit">{{ note.name }}</div>
+            </td>
+            <!-- email  -->
+            <td>
+              <div *ngIf="note.isEdit">
+                <input type="text" [(ngModel)]="note.email" />
+              </div>
+              <div *ngIf="!note.isEdit">{{ note.email }}</div>
+            </td>
+            <!-- mobile -->
+            <td>
+              <div *ngIf="note.isEdit">
+                <input type="text" [(ngModel)]="note.mobile" />
+              </div>
+              <div *ngIf="!note.isEdit">{{ note.mobile }}</div>
+            </td>
+            <!-- services -->
+            <td>
+              <div *ngIf="note.isEdit">
+                <input type="text" [(ngModel)]="note.services" />
+              </div>
+              <div *ngIf="!note.isEdit">{{ note.services }}</div>
+            </td>
+            <!-- description -->
+            <td>
+              <div *ngIf="note.isEdit">
+                <input type="text" [(ngModel)]="note.description" />
+              </div>
+              <div *ngIf="!note.isEdit">{{ note.description }}</div>
+            </td>
+            <!-- Action -->
+            <td>
+              <div *ngIf="!note.isEdit">
+                <button class="btn1" (click)="editData(note)">
+                  <i class="bi bi-pencil"></i>
+                </button>
+                <span
+                  ><button class="btn2" (click)="deleteData(note.id)">
+                    <i class="bi bi-trash3-fill"></i></button
+                ></span>
+              </div>
+              <!-- edit action -->
+              <div *ngIf="note.isEdit">
+                <button class="btn1">
+                  <i
+                    class="bi bi-save"
+                    type="submit"
+                    (click)="updateRecord(note)"
+                  ></i>
+                </button>
+                <span>
+                  <button class="btn2">
+                    <i class="bi bi-x-circle" (click)="cancel(note)"></i>
+                  </button>
+                </span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">...</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="contact">
+  <div class="container">
+    <!--contact us-->
+    <div class="maincontent">
+      <h1>GET IN TOUCH</h1>
+      <hr class="h" />
+      <p>Feel free to reach out to us</p>
+    </div>
+    <div class="subcontainer">
+      <div class="container-1" [formGroup]="form">
+        <form action="javascript:void(0)" (submit)="send()">
+          <h3>Send a Message</h3>
+          <input
+            formControlName="from_name"
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required
+          />
+
+          <input
+            formControlName="from_email"
+            type="email"
+            id="email"
+            placeholder="Email ID"
+            required
+          />
+
+          <textarea
+            formControlName="message"
+            id="message"
+            rows="4"
+            placeholder="How can we help you?"
+          ></textarea>
+
+          <button type="submit" [disabled]="!form.valid">Submit</button>
+        </form>
+      </div>
+
+      <!--social-->
+      <div class="socials">
+        <div class="social-sub">
+          <div class="social-content">
+            <img src="./assets/img/icon-12.png" width="35px" />
+            <h3>+609 - 6285800</h3>
+          </div>
+
+          <div class="social-content">
+            <img src="./assets/img/icon-13.png" />
+            <h3>info@tajdid.com.my</h3>
+          </div>
+        </div>
+        <div class="social-content-1">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.5654280430667!2d103.14567567478012!3d5.330263135878816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b7be7487290fb5%3A0x2fe4ad5f3e5b1362!2sTD1303%20-%20TERENGGANU%20DIGITAL%201303!5e0!3m2!1sen!2smy!4v1698493440921!5m2!1sen!2smy"
+            width="650px"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

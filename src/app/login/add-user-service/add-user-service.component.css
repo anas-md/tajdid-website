@@ -1,0 +1,17 @@
+.unknown {
+    background: #ffff;
+    position: center;
+    height: 100px;
+    width: 100%;
+    background-size: cover;
+    top: 0;
+  }
+
+  .text{
+    padding: 10px 0;
+  }
+
+  .container{
+    margin: auto;
+    width: 70%;
+  }

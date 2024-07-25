@@ -1,0 +1,136 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<!-- header -->
+<header class="nav" appScroll>
+  <img src="./assets/img/logo-removebg-preview.png" />
+  <ul>
+    <div
+      class="menu_icon"
+      appScroll
+      [class.menu_icon_Class]="menu_icon_variable"
+      (click)="openMenu()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- menu  -->
+    <div class="menu" [class.menuClass]="menuVariable">
+      <li class="items">
+        <a class="nav-link" routerLink="" routerLinkActive="active-link"
+          >HOME
+        </a>
+      </li>
+
+      <li class="items">
+        <a class="nav-link" routerLink="about-us" routerLinkActive="active-link"
+          >ABOUT US
+        </a>
+      </li>
+
+      <!-- small screen size dropdown -->
+      <li class="items">
+        <div class="dropdown">
+          <a class="dropbtn-alt" id="f1" (click)="accordion('f1')"
+            >SERVICES<span
+              class="pull-right up-icon"
+              [class.icon]="id === 'f1'"
+            >
+              <i class="fa fa-caret-down"></i
+            ></span>
+          </a>
+
+          <div class="accordian" *ngIf="id == 'f1'">
+            <a
+              routerLink="social-media-sentiment-analytics"
+              routerLinkActive="active-link"
+              >Social Media Sentiment Analytics</a
+            ><br />
+            <a routerLink="nfcCard" routerLinkActive="active-link"
+              >NFC Business Card</a
+            ><br />
+            <a routerLink="face-recognition" routerLinkActive="active-link"
+              >Face Recognition Attendance System</a
+            ><br />
+            <a routerLink="islamic-digital" routerLinkActive="active-link"
+              >Islamic Digital Leadership Development</a
+            >
+          </div>
+        </div>
+      </li>
+
+      <!-- normal screen size dropdown -->
+      <li class="items">
+        <div class="dropdown">
+          <a class="dropbtn">SERVICES <i class="fa fa-caret-down"></i> </a>
+          <div class="dropdown-content" appScroll>
+            <a
+              routerLink="social-media-sentiment-analytics"
+              routerLinkActive="active-link"
+              >Social Media Sentiment Analytics</a
+            ><br />
+            <a routerLink="nfcCard" routerLinkActive="active-link"
+              >NFC Business Card</a
+            ><br />
+            <a routerLink="face-recognition" routerLinkActive="active-link"
+              >Face Recognition Attendance System</a
+            ><br />
+            <a routerLink="islamic-digital" routerLinkActive="active-link"
+              >Islamic Digital Leadership Development</a
+            >
+          </div>
+        </div>
+      </li>
+
+      <li class="items">
+        <a class="nav-link" routerLink="news" routerLinkActive="active-link"
+          >NEWS
+        </a>
+      </li>
+      <li class="items">
+        <a class="navlink" routerLink="contact" routerLinkActive="active-link"
+          >CONTACT US
+        </a>
+      </li>
+
+      <li class="items">
+        <a
+          class="navlink"
+          *ngIf="usermenu"
+          routerLink="user"
+          routerLinkActive="active-link"
+        >
+          USER</a
+        >
+      </li>
+
+      <li class="items">
+        <a
+          class="navlink"
+          *ngIf="adminmenu"
+          routerLink="admin"
+          routerLinkActive="active-link"
+        >
+          ADMIN</a
+        >
+      </li>
+
+      <!-- login btn   -->
+      <li class="items-1">
+        <a
+          class="navlink"
+          *ngIf="loginbtn"
+          routerLink="login"
+          routerLinkActive="active-link"
+          ><i class="bi bi-box-arrow-in-right"></i
+        ></a>
+      </li>
+      <!-- logout btn   -->
+      <li class="items">
+        <a class="navlink" *ngIf="logoutbtn" (click)="logout()">LOGOUT</a>
+      </li>
+    </div>
+  </ul>
+</header>

@@ -1,0 +1,281 @@
+/* keyframes  */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/* header  */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.06s;
+  padding: 10px 80px 10px;
+  z-index: 100000;
+  background-color: #2234ae;
+  background-image: linear-gradient(315deg, #1e244d 0%, #0b0d13 90%);
+  transition: 0.4s;
+}
+
+header img {
+  position: relative;
+  width: 11%;
+  padding: 10px 0;
+  transition: 0.3 ease-in;
+  padding-left: 20px;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0%;
+}
+
+.menu {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 200px;
+  transition: 0.6s;
+  padding: 0 11px;
+  top: 0;
+}
+
+header ul li a:hover {
+  color: #11f779;
+  transition: 0.6s;
+  padding: 0 15px;
+}
+.items {
+  margin: 10px 0;
+}
+.items-1 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.new-nav {
+  background-image: none;
+  background-color: #fff;
+  position: fixed;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  color: #000;
+  transition: 0.4s;
+}
+
+.new-nav ul li a {
+  font-size: 15px;
+  color: #000;
+}
+
+.new-nav img {
+  width: 90px;
+  transition: 0.3s;
+}
+
+/* dropdown */
+.dropdown .dropbtn {
+  font-size: 14px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0 16px;
+  background-color: inherit;
+  font-family: inherit;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a1f41;
+  padding: 5px;
+  min-width: 210px;
+  box-shadow: none;
+  z-index: 10;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  animation-name: slideLeft;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+  transition: 1s ease;
+}
+
+.new-dropdown-content {
+  background-color: white;
+}
+
+/* dropdown for smaller screen size */
+.dropbtn-alt {
+  display: none;
+  font-size: 14px;
+  color: white;
+}
+
+.accordian {
+  padding-top: 10px;
+  display: none;
+  animation-name: slideLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+  transition: 1s ease;
+  transition: 4s ease-in-out;
+}
+
+.accordian a {
+  float: none;
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.up-icon {
+  transition: 0.2s ease-out;
+  background-color: none;
+}
+
+.icon {
+  animation-name: icon;
+  transform: rotate(180deg);
+  transition: 0.2s ease-out;
+}
+
+@media (max-width: 80em) {
+  header img {
+    margin: 0 -90px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 60em) {
+  header img {
+    margin: 0 -90px;
+    width: 120px;
+  }
+
+  .menu {
+    position: fixed;
+    right: -280px;
+    top: 55px;
+    width: 200px;
+    height: 100%;
+    display: block;
+    padding: 5px;
+    background-color: rgb(23, 21, 21);
+    transition: 0.4s ease-in-out;
+  }
+
+  .up-icon {
+    padding: 0 20px;
+  }
+
+  header ul li {
+    padding: 1pt 0;
+    position: relative;
+  }
+
+  /* icon */
+  .menu_icon {
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+    margin-right: -40px;
+  }
+
+  .menu_icon span {
+    width: 32px;
+    height: 3px;
+    background: white;
+    display: block;
+    transition: 0.2s ease-in-out;
+  }
+
+  .new-menu_icon span {
+    background: rgb(23, 21, 21);
+  }
+  .menu_icon span:nth-child(2) {
+    margin: 4px 0;
+  }
+
+  .menu_icon_Class span:nth-child(2) {
+    display: none;
+  }
+
+  .menu_icon_Class span:nth-child(1) {
+    transform: rotate(40deg);
+  }
+
+  .menu_icon_Class span:nth-child(3) {
+    transform: rotate(-40deg);
+    margin-top: -3px;
+  }
+
+  .menuClass {
+    right: 0;
+    transition: 0.4s ease-in-out;
+  }
+  .new-nav ul li a {
+    font-size: 15px;
+    color: white;
+  }
+  .dropdown-content {
+    background-color: rgb(23, 21, 21);
+    position: relative;
+    display: none;
+    width: 100%;
+  }
+  .accordian {
+    position: relative;
+    display: block;
+  }
+
+  .dropbtn {
+    display: none;
+  }
+  .dropbtn-alt {
+    display: block;
+  }
+}

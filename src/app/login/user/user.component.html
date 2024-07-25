@@ -1,0 +1,134 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+  crossorigin="anonymous"
+/>
+
+<div class="unknown"></div>
+<div class="sub-nav" (click)="openMenu()">
+  <a><i class="bi bi-gear"></i> Settings</a>
+</div>
+<div class="menuContainer">
+  <div class="menu" [class.menuClass]="menuVariable">
+    <li class="items">
+      <a class="nav-link" href="/#">Reset Password </a>
+    </li>
+  </div>
+</div>
+<div class="container">
+  <div class="content">
+    <h3>Hi, <span>user</span></h3>
+    <p>welcome to user page</p>
+  </div>
+  <div class="text">
+    <h1>Services</h1>
+    <p>
+      If you interested with our services, feel free to
+      <a href="/addUserService">subscribe</a>
+    </p>
+  </div>
+  <div class="cardContainer">
+    <div class="cardSubContainer">
+      <!-- services 1 -->
+      <div class="card" style="width: 19rem">
+        <img
+          src="./assets/img/Social media.png"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h2 class="card-title">Social Media Analytics</h2>
+          <p class="card-text">
+            Sentiment analysis is created by using approaches from data science
+            and artificial intelligence (AI) technology to deliver responses to
+            people's opinions on specific commercial products and services.
+          </p>
+          <a
+            routerLink="/social-media-sentiment-analytics"
+            class="btn btn-primary"
+            >Read More</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- services 2 -->
+    <div class="cardSubContainer">
+      <div class="card" style="width: 19rem">
+        <img src="./assets/img/nfcCard.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h2 class="card-title">NFC Business Card</h2>
+          <p class="card-text">
+            NFC card offers a blend of traditional networking practices with the
+            advantages of digital technology, making it easier for individuals
+            to share and receive information in a quick and efficient manner.
+          </p>
+          <a routerLink="/nfcCard" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+    <!-- services 3 -->
+    <div class="cardSubContainer">
+      <div class="card" style="width: 19rem">
+        <img
+          src="./assets/img/facialRecognition.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h2 class="card-title">Face Recognition Attendance System</h2>
+          <p class="card-text">
+            A facial recognition attendance system is a technology that uses
+            facial recognition algorithms to identify and verify individuals for
+            attendance tracking purposes.
+          </p>
+          <a routerLink="/face-recognition" class="btn btn-primary"
+            >Read More</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- services 4 -->
+    <div class="cardSubContainer">
+      <div class="card" style="width: 19rem">
+        <img
+          src="./assets/img/trafficLight.jpeg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h2 class="card-title">Smart Traffic Light</h2>
+          <p class="card-text">
+            Refers to the systematic process of creating and deploying digital
+            services, such as mobile apps, web platforms, or software solutions,
+            to address specific needs or challenges
+          </p>
+          <a routerLink="/Smart-Traffic-Light" class="btn btn-primary"
+            >Read More</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- services 5 -->
+    <div class="cardSubContainer">
+      <div class="card" style="width: 19rem">
+        <img
+          src="./assets/img/userServices-5.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h2 class="card-title">Islamic Digital Leadership Development</h2>
+          <p class="card-text">
+            TAJDID provides an Islamic Digital Leadership Development course
+            with the goal of establishing a competitive country based on digital
+            innovation while simultaneously constructing a sustainable digital
+            society.
+          </p>
+          <a routerLink="/islamic-digital" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
